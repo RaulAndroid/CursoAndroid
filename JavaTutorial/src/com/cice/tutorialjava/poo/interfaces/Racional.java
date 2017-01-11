@@ -48,5 +48,19 @@ public class Racional implements Comparable{
 		this.denominador = denominador;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		if(!(obj instanceof Racional))
+			return false;
+		Racional r=(Racional)obj;
+		return (numerador*r.getDenominador()==denominador*r.getNumerador())?true:false;
+	}
 
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		// Devolvemos 1000 en todos los casos para que al hacer la comparativa recurra al método equal
+		return 1000;
+	}
 }
