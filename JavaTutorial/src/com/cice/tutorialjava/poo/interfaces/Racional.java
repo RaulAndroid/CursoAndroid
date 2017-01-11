@@ -60,7 +60,10 @@ public class Racional implements Comparable{
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub
-		// Devolvemos 1000 en todos los casos para que al hacer la comparativa recurra al método equal
-		return 1000;
+		int result=17;
+		result=31*result+numerador;
+		result=31*result+denominador;
+		return result;
+		
 	}
 }
