@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Diccionario {
 	Map<Character,List<String>> buffer;
@@ -31,5 +32,17 @@ public class Diccionario {
 			buffer.put(c, l);
 		}
 		l.add(line);
+	}
+	
+	public void print(){
+		Set<Character> keys=buffer.keySet();
+		for(Character c:keys){
+			List <String> values=buffer.get(c);
+			System.out.print(c+"[");
+			for(String word:values){
+				System.out.print(word+" ");
+			}
+			System.out.println("]");
+		}
 	}
 }
