@@ -23,6 +23,9 @@ public class OrdenacionPersonasTest {
 			public int compare (Persona o1, Persona o2){
 				return o1.getEdad()-o2.getEdad();
 			}
+		// con la expresion lambda sería asi:
+		// Collections.sort(list,(01,02)->01.getEdad()-o2.getEdad());
+		// y no haría falta definir el método
 		});
 		for(Persona p:list){
 			p.print();
